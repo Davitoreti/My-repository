@@ -1,6 +1,65 @@
+@import 'fonts';
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    background-color: $primary-color;
+    color: white;
+}
+
+.img-header{
+    position: relative;
+    left: 8.5%;
+    
+    > img{
+        border-radius: 999px;
+    }
+}
+
+.text-header{
+    @include font-properties($font-montserrat, 400, 1.5rem);
+    margin-left: 3%;
+
+    > p > span:nth-child(1), span:nth-child(1n + 2) {
+      color: red;
+    }
+}
+
+.line {
+    content: "";
+    display: block;
+    width: 100%; 
+    height: 20px; 
+    background: radial-gradient( white 1%, red 20%, transparent 79%);
+}
+
+.container-main{
+    @include font-properties($font-nunito, 400, 1.1.5rem);
+}
+
+.paragraph-main{
+    text-align: justify;
+    text-indent: 2rem;
+}
+
+.main-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3rem;
+    align-items: center;
+
+    > .img{
+        border: 25px solid #373737;
+        border-radius: 21px;
+        
+    }
+}
+
+.footer{
+    @include font-properties($font-nunito, 400, 1.3rem);
+}

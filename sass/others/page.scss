@@ -64,10 +64,9 @@ body {
         background-size: cover;
 
         &:hover {
-            border: 1px solid red;
+            border: 2px solid red;
         }
     }
-
 
     .img-bank-login-page {
         height: 38vh;
@@ -86,6 +85,58 @@ body {
     }
 }
 
+.contact-icons{
+    > a > img:hover {
+        transform: scale(1.2);
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
 .footer{
     @include font-properties($font-nunito, 400, 1.3rem);
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .text-header {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        right: 2%;
+    }
+
+    .main-images {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+
+        > .img {
+            width: 100%;
+            transform: translate(0, -20%);
+
+            > img {
+                width: 90%;
+            }
+        }
+
+        .img-bank-login-page {
+            height: 40vh;   
+            margin-top: 5rem;
+        }
+    
+        .img-contact-form {
+            height: 55vh;
+        }
+    
+        .img-login-page {
+            height: 34vh;
+        }
+    
+        .img-JordanShoes {
+            height: 34vh;
+        }
+
+        .img-social-links-profile{
+            height: 45vh;
+        }
+    }
 }
